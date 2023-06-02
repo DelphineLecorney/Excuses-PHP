@@ -19,6 +19,10 @@
     <label for="boy">Boy</label>
     <input type="radio" name="gender" value="girl" id="girl" /> 
     <label for="girl">Girl</label>
+
+    <label for="nameTeacher">Please enter the teacher's name :</label>
+    <input type="text" name="nameTeacher">
+
 </form>
 <?php
 
