@@ -33,6 +33,15 @@
     <br>
     <input type="radio" name="options" value="death-of-the-family's member" id="death-of-the-family's member" />
     <label for="death-of-the-family's member">Death-of-the-family's member</label>
+    <br>
+    <input type="radio" name="options" value="transport problems" id="transport problems" />
+    <label for="transport problems">Transport problems</label>
+    <br>
+    <input type="radio" name="options" value="weather conditions" id="weather conditions" />
+    <label for="weather conditions">weather conditions</label>
+    <br>
+    <input type="radio" name="options" value="Extra-curricular activities" id="Extra-curicular activities" />
+    <label for="Extra-curicular activities">Extra-curicular activities</label>
 
 </form>
 <?php
