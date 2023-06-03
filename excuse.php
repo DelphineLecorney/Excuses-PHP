@@ -11,12 +11,14 @@
 </head>
 
 <body>
-<h1>Alibi Pro</h1>
+    <header>
+        <h1>Alibi Pro</h1>
+    </header>
 
     <form method="GET" action="excuse.php">
         <label for="nameChild">Please enter the child's name :</label>
         <input type="text" name="nameChild">
-        <br>
+
         <label for="gender">Please select your gender: </label>
         <input type="radio" name="gender" value="boy" id="boy" />
         <label for="boy">Boy</label>
