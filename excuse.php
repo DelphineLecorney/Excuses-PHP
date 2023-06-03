@@ -16,41 +16,42 @@
     </header>
 
     <form method="GET" action="excuse.php">
-        <label for="nameChild">Please enter the child's name :</label>
-        <input type="text" name="nameChild">
+    <label for="nameChild">Please enter the child's name :</label>
+    <input type="text" name="nameChild">
 
-        <label for="gender">Please select your gender: </label>
-        <input type="radio" name="gender" value="boy" id="boy" />
-        <label for="boy">Boy</label>
-        <input type="radio" name="gender" value="girl" id="girl" />
-        <label for="girl">Girl</label>
-        <br>
-        <label for="nameTeacher">Please enter the teacher's name :</label>
-        <input type="text" name="nameTeacher">
-        <br><br>
-        <label for="gender">Please select an option : </label>
-        <br><br>
-        <input type="radio" name="options" value="illness" id="illness" />
-        <label for="illness">Illness</label>
-        <br>
-        <input type="radio" name="options" value="death-of-the-pet" id="death-of-the-pet" />
-        <label for="death-of-the-pet">Death-of-the-pet</label>
-        <br>
-        <input type="radio" name="options" value="death-of-the-family's member" id="death-of-the-family's member" />
-        <label for="death-of-the-family's member">Death-of-the-family's member</label>
-        <br>
-        <input type="radio" name="options" value="transport problems" id="transport problems" />
-        <label for="transport problems">Transport problems</label>
-        <br>
-        <input type="radio" name="options" value="weather conditions" id="weather conditions" />
-        <label for="weather conditions">Weather conditions</label>
-        <br>
-        <input type="radio" name="options" value="Extra-curricular activities" id="Extra-curicular activities" />
-        <label for="Extra-curicular activities">Extra-curicular activities</label>
-        <br><br>
-        <input type="submit" name="submit" value="Submit" id="submit">
-        <br><br>
-    </form>
+    <label for="gender">Please select your gender: </label>
+    <input type="radio" name="gender" value="boy" id="gender-boy" />
+    <label for="gender-boy">Boy</label>
+    <input type="radio" name="gender" value="girl" id="gender-girl" />
+    <label for="gender-girl">Girl</label>
+    <br>
+    <label for="nameTeacher">Please enter the teacher's name :</label>
+    <input type="text" name="nameTeacher">
+    <br>
+    <label for="options">Please select an option: </label>
+    <br>
+    <input type="radio" name="options" value="illness" id="option-illness" />
+    <label for="option-illness">Illness</label>
+    <br>
+    <input type="radio" name="options" value="death-of-the-pet" id="option-death-of-the-pet" />
+    <label for="option-death-of-the-pet">Death of the pet</label>
+    <br>
+    <input type="radio" name="options" value="death-of-the-family-member" id="option-death-of-the-family-member" />
+    <label for="option-death-of-the-family-member">Death of the family member</label>
+    <br>
+    <input type="radio" name="options" value="transport-problems" id="option-transport-problems" />
+    <label for="option-transport-problems">Transport problems</label>
+    <br>
+    <input type="radio" name="options" value="weather-conditions" id="option-weather-conditions" />
+    <label for="option-weather-conditions">Weather conditions</label>
+    <br>
+    <input type="radio" name="options" value="extra-curricular-activities" id="option-extra-curricular-activities" />
+    <label for="option-extra-curricular-activities">Extra-curricular activities</label>
+    <br><br>
+    <input type="submit" name="submit" value="Submit" id="submit">
+    <br><br>
+</form>
+
     <?php
 if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["options"], $_GET['submit'])) {
     $nameChild = $_GET["nameChild"];
