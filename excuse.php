@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="pictures\apple-icon-57x57.png" />
-    <title>Excuse</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Alibi Pro</title>
 </head>
 
 <body>
-
+<h1>Alibi Pro</h1>
 
     <form method="GET" action="excuse.php">
         <label for="nameChild">Please enter the child's name :</label>
@@ -59,7 +60,7 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     $pronounGender = ($gender === 'boy') ? 'he' : 'she';
     $personalPronounGender = ($gender === 'boy') ? 'him' : 'her';
 
-    $messageIlness = "$date<br><br> 
+    $messageIllness = "$date<br><br> 
         Madam $nameTeacher, <br><br>
 
         $nameGender $nameChild, woke up this morning with a headache 
@@ -76,7 +77,7 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
 
         $nameChild's mother.";
 
-    $messageDeathOfThePet = "$date<br><br>
+        $messageDeathOfThePet = "$date<br><br>
         Dear Mr $nameTeacher,<br><br>
 
         I am writing to inform you of some sad news that has affected us as a family. <br>
@@ -104,9 +105,9 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         $nameChild's mother";
 
     if ($gender === 'boy' && $options === 'illness') {
-        echo $messageIlness;
+        echo $messageIllness;
     }elseif ($gender === 'girl' && $options === 'illness') {
-        echo $messageIlness;
+        echo $messageIllness;
     }elseif ($gender === 'boy' && $options === 'death-of-the-pet') {
         echo $messageDeathOfThePet;
     }elseif ($gender === 'girl' && $options === 'death-of-the-pet') {
