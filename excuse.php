@@ -53,22 +53,47 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     $nameTeacher = $_GET["nameTeacher"];
     $options = $_GET["options"];
     $date = date("l, \\t\\h\\e jS F Y");
+    
     echo $date;
-    echo "Madam $nameTeacher,
 
-    My son $nameChild woke up this morning with a headache 
-    and I don't even think he has a fever. 
-    I thought it prudent not to take him to school today 
-    and call the doctor.
+    if ($gender === 'boy') {
+        echo "Madam $nameTeacher,
 
-    I don't know yet, this morning, if he'll be absent for several days, but I'll be sure to let you know 
-    in this liaison book, as soon as the doctor has made a medical diagnosis.
+        My son $nameChild woke up this morning with a headache 
+        and I don't even think he has a fever. 
+        I thought it prudent not to take him to school today 
+        and call the doctor.
 
-    Yours sincerely
+        I don't know yet, this morning, if he'll be absent for several days, but I'll be sure to let you know 
+        in this liaison book, as soon as the doctor has made a medical diagnosis.
 
-    $nameChild's mother.";
+        Yours sincerely,
+
+        $nameChild's mother.";
+
+
+    } elseif ($gender === 'girl') {
+        echo "Madam $nameTeacher,
+
+        My daughter $nameChild woke up this morning with a headache 
+        and I don't even think she has a fever. 
+        I thought it prudent not to take her to school today 
+        and call the doctor.
+
+        I don't know yet, this morning, if she'll be absent for several days, but I'll be sure to let you know 
+        in this liaison book, as soon as the doctor has made a medical diagnosis.
+
+        Yours sincerely,
+
+        $nameChild's mother.";
+
+
+    }
 }
 ?>
+
+
+
 
 
 </body>
