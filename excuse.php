@@ -44,7 +44,7 @@
     <label for="Extra-curicular activities">Extra-curicular activities</label>
     <br><br>
     <input type="submit" name="submit" value="Submit" id="submit">
-
+    <br><br>
 </form>
 <?php
 if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["options"], $_GET['submit'])) {
@@ -53,39 +53,33 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     $nameTeacher = $_GET["nameTeacher"];
     $options = $_GET["options"];
     $date = date("l, \\t\\h\\e jS F Y");
+    $nameGender = ($gender === 'boy') ? 'My son' : 'My daughter';
+    $pronounGender = ($gender === 'boy') ? 'he' : 'she';
+    $personalPronounGender = ($gender === 'boy') ? 'him' : 'her';
     
-    echo $date;
+
+
+    $message = "$date<br><br> Madam $nameTeacher, <br><br>
+
+    $nameGender $nameChild, woke up this morning with a headache 
+    and I don't even think $pronounGender has a fever.<br><br> 
+    I thought it prudent not to take $personalPronounGender to school today 
+    and call the doctor.<br><br> 
+
+    I don't know yet, this morning, if $pronounGender'll be absent for several days, but I'll be sure to let you know<br><br> 
+    in this liaison book, as soon as the doctor has made a medical diagnosis.<br><br> 
+
+    Yours sincerely,<br><br> 
+
+    $nameChild's mother.";
 
     if ($gender === 'boy') {
-        echo "Madam $nameTeacher,
-
-        My son $nameChild woke up this morning with a headache 
-        and I don't even think he has a fever. 
-        I thought it prudent not to take him to school today 
-        and call the doctor.
-
-        I don't know yet, this morning, if he'll be absent for several days, but I'll be sure to let you know 
-        in this liaison book, as soon as the doctor has made a medical diagnosis.
-
-        Yours sincerely,
-
-        $nameChild's mother.";
+        echo $message;
+    }elseif ($gender === 'girl') {
+        echo $message;
 
 
-    } elseif ($gender === 'girl') {
-        echo "Madam $nameTeacher,
 
-        My daughter $nameChild woke up this morning with a headache 
-        and I don't even think she has a fever. 
-        I thought it prudent not to take her to school today 
-        and call the doctor.
-
-        I don't know yet, this morning, if she'll be absent for several days, but I'll be sure to let you know 
-        in this liaison book, as soon as the doctor has made a medical diagnosis.
-
-        Yours sincerely,
-
-        $nameChild's mother.";
 
 
     }
