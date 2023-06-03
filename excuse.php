@@ -22,9 +22,9 @@
     <br>
     <label for="nameTeacher">Please enter the teacher's name :</label>
     <input type="text" name="nameTeacher">
-    <br>
+    <br><br>
     <label for="gender">Please select an option : </label>
-    <br>
+    <br><br>
     <input type="radio" name="options" value="illness" id="illness" />
     <label for="illness">Illness</label>
     <br>
@@ -42,13 +42,34 @@
     <br>
     <input type="radio" name="options" value="Extra-curricular activities" id="Extra-curicular activities" />
     <label for="Extra-curicular activities">Extra-curicular activities</label>
+    <br><br>
+    <input type="submit" name="submit" value="Submit" id="submit">
 
 </form>
 <?php
-$date = date("l, \\t\\h\\e jS F Y");
-echo $date;
+if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["options"], $_GET['submit'])) {
+    $nameChild = $_GET["nameChild"];
+    $gender = $_GET["gender"];
+    $nameTeacher = $_GET["nameTeacher"];
+    $options = $_GET["options"];
+    $date = date("l, \\t\\h\\e jS F Y");
+    echo $date;
+    echo "Madam $nameTeacher,
 
+    My son $nameChild woke up this morning with a headache 
+    and I don't even think he has a fever. 
+    I thought it prudent not to take him to school today 
+    and call the doctor.
+
+    I don't know yet, this morning, if he'll be absent for several days, but I'll be sure to let you know 
+    in this liaison book, as soon as the doctor has made a medical diagnosis.
+
+    Yours sincerely
+
+    $nameChild's mother.";
+}
 ?>
+
 
 </body>
 </html>
