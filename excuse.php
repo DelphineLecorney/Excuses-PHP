@@ -38,14 +38,15 @@
     <label for="transport problems">Transport problems</label>
     <br>
     <input type="radio" name="options" value="weather conditions" id="weather conditions" />
-    <label for="weather conditions">weather conditions</label>
+    <label for="weather conditions">Weather conditions</label>
     <br>
     <input type="radio" name="options" value="Extra-curricular activities" id="Extra-curicular activities" />
     <label for="Extra-curicular activities">Extra-curicular activities</label>
 
 </form>
 <?php
-
+$date = date("l, \\t\\h\\e jS F Y");
+echo $date;
 
 ?>
 
