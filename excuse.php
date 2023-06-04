@@ -141,6 +141,26 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         
         $nameChild's mother";
 
+        $messageExtraCcurricularActivities = "$date<br><br>
+        Dear Mr $nameTeacher,<br><br>
+
+        I would like to apologise for the absence of $nameGender, $nameChild, from school yesterday due to his participation
+        in a special extracurricular activity. Unfortunately, we realised that this activity coincided with school hours and
+        we were unable to find an alternative way of attending without missing school.<br><br>
+
+        We understand the importance of regular attendance at school and we always strive to ensure optimum attendance.<br><br> 
+        However, in this case, participation in this activity offered a unique and beneficial opportunity for $nameGender's 
+        development.<br><br>
+
+        Please take this exceptional situation into account and we assure you that we are fully committed to ensuring that 
+        our child actively participates in lessons and makes up any missed work.<br><br>
+
+        We sincerely apologise for any inconvenience caused and thank you for your understanding.<br><br>
+
+        Yours sincerely
+
+        $nameChild's mother";
+
     if ($gender === 'boy' && $options === 'illness') {
         echo $messageIllness;
     } elseif ($gender === 'girl' && $options === 'illness') {
@@ -157,6 +177,10 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         echo $messageWeatherConditions;
     } elseif ($gender === 'girl' && $options === 'weather-conditions') {
         echo $messageWeatherConditions;
+    }elseif ($gender === 'boy' && $options === 'extra-curricular-activities') {
+        echo $messageExtraCcurricularActivities;
+    } elseif ($gender === 'girl' && $options === 'extra-curricular-activities') {
+        echo $messageExtraCcurricularActivities;
     }
 }
 ?>
