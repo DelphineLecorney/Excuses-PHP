@@ -56,14 +56,14 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     $nameTeacher = $_GET["nameTeacher"];
     $options = $_GET["options"];
     $date = date("l, \\t\\h\\e jS F Y");
-    $nameGender = ($gender === 'boy') ? 'My son' : 'My daughter';
+    $nameGender = ($gender === 'boy') ? 'my son' : 'my daughter';
     $pronounGender = ($gender === 'boy') ? 'he' : 'she';
     $personalPronounGender = ($gender === 'boy') ? 'him' : 'her';
 
     $messageIllness = "$date<br><br> 
         Madam $nameTeacher, <br><br>
 
-        $nameGender $nameChild, woke up this morning with a headache 
+        $nameChild, $nameGender, woke up this morning with a headache 
         and I don't even think $pronounGender has a fever.<br><br> 
 
         I thought it prudent not to take $personalPronounGender to school today 
@@ -77,7 +77,7 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
 
         $nameChild's mother.";
 
-        $messageDeathOfThePet = "$date<br><br>
+    $messageDeathOfThePet = "$date<br><br>
         Dear Mr $nameTeacher,<br><br>
 
         I am writing to inform you of some sad news that has affected us as a family. <br>
@@ -104,14 +104,36 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         
         $nameChild's mother";
 
+    $messageTransportProblems = "$date<br><br>
+        Dear Mr $nameTeacher,<br><br>
+        I would like to apologise for the absence of $nameGender, $nameChild, today due to the current strike.<br>
+         Unfortunately, public transport has been affected and we have been unable to get to school.<br><br>
+
+        I'm aware of the importance of regular attendance at school and always endeavour to ensure optimum attendance.<br>
+         However, in this case the circumstances were beyond our control.<br><br>
+        
+        I hope that this situation will be resolved quickly and that the school 
+        can return to normal. <br><br>
+        
+        I undertake that $nameGender will return to school as soon as conditions permit.<br><br>
+        
+        I apologise for any inconvenience caused and thank you for your understanding.<br><br>
+        
+        Yours sincerely,
+        $nameChild's mother";
+
     if ($gender === 'boy' && $options === 'illness') {
         echo $messageIllness;
-    }elseif ($gender === 'girl' && $options === 'illness') {
+    } elseif ($gender === 'girl' && $options === 'illness') {
         echo $messageIllness;
-    }elseif ($gender === 'boy' && $options === 'death-of-the-pet') {
+    } elseif ($gender === 'boy' && $options === 'death-of-the-pet') {
         echo $messageDeathOfThePet;
-    }elseif ($gender === 'girl' && $options === 'death-of-the-pet') {
+    } elseif ($gender === 'girl' && $options === 'death-of-the-pet') {
         echo $messageDeathOfThePet;
+    } elseif ($gender === 'boy' && $options === 'transport-problems') {
+        echo $messageTransportProblems;
+    } elseif ($gender === 'girl' && $options === 'transport-problems') {
+        echo $messageTransportProblems;
     }
 }
 ?>
