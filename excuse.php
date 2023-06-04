@@ -13,12 +13,14 @@
 <body>
     <header>
         <h1>Alibi Pro</h1>
+        <p class="header-text">If you need notes to exempt your children from specific school activities, 
+            you've come to the right place. Simply fill in the form and that's it!</p>
     </header>
     <!-- Form -->
     <form method="GET" action="excuse.php">
     <label for="nameChild">Please enter the child's name :</label>
     <input type="text" name="nameChild">
-
+    <br>
     <label for="gender">Please select your gender: </label>
     <input type="radio" name="gender" value="boy" id="gender-boy" />
     <label for="gender-boy">Boy</label>
@@ -29,22 +31,21 @@
     <input type="text" name="nameTeacher">
     <br>
     <label for="options">Please select an option: </label>
-    <br>
     <input type="radio" name="options" value="illness" id="option-illness" />
     <label for="option-illness">Illness</label>
-    <br>
+
     <input type="radio" name="options" value="death-of-the-pet" id="option-death-of-the-pet" />
     <label for="option-death-of-the-pet">Death of the pet</label>
-    <br>
+
     <input type="radio" name="options" value="transport-problems" id="option-transport-problems" />
     <label for="option-transport-problems">Transport problems</label>
-    <br>
+
     <input type="radio" name="options" value="weather-conditions" id="option-weather-conditions" />
     <label for="option-weather-conditions">Weather conditions</label>
-    <br>
+
     <input type="radio" name="options" value="extra-curricular-activities" id="option-extra-curricular-activities" />
     <label for="option-extra-curricular-activities">Extra-curricular activities</label>
-    <br><br>
+    <br>
     <input type="submit" name="submit" value="Submit" id="submit">
     <br><br>
 </form>
