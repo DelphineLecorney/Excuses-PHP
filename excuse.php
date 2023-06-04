@@ -14,7 +14,7 @@
     <header>
         <h1>Alibi Pro</h1>
     </header>
-
+    <!-- Form -->
     <form method="GET" action="excuse.php">
     <label for="nameChild">Please enter the child's name :</label>
     <input type="text" name="nameChild">
@@ -50,11 +50,22 @@
 </form>
 
     <?php
+    // Retrieve field values
 if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["options"], $_GET['submit'])) {
     $nameChild = $_GET["nameChild"];
     $gender = $_GET["gender"];
     $nameTeacher = $_GET["nameTeacher"];
     $options = $_GET["options"];
+    // Check that the required fields have been completed
+    if (empty($nameChild) || empty($gender) || empty($nameTeacher) || empty($options)) {
+        echo "Please complete all fields";
+        exit; 
+    }// Check the minimum length of the child's name
+    if (strlen($nameChild) < 2) {
+        echo "The child's name must be at least 2 characters long.";
+        exit;
+    }
+
     $date = date("l, \\t\\h\\e jS F Y");
     $nameGender = ($gender === 'boy') ? 'my son' : 'my daughter';
     $pronounGender = ($gender === 'boy') ? 'he' : 'she';
@@ -160,28 +171,26 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         Yours sincerely
 
         $nameChild's mother";
-
-    if ($gender === 'boy' && $options === 'illness') {
-        echo $messageIllness;
-    } elseif ($gender === 'girl' && $options === 'illness') {
-        echo $messageIllness;
-    } elseif ($gender === 'boy' && $options === 'death-of-the-pet') {
-        echo $messageDeathOfThePet;
-    } elseif ($gender === 'girl' && $options === 'death-of-the-pet') {
-        echo $messageDeathOfThePet;
-    } elseif ($gender === 'boy' && $options === 'transport-problems') {
-        echo $messageTransportProblems;
-    } elseif ($gender === 'girl' && $options === 'transport-problems') {
-        echo $messageTransportProblems;
-    }elseif ($gender === 'boy' && $options === 'weather-conditions') {
-        echo $messageWeatherConditions;
-    } elseif ($gender === 'girl' && $options === 'weather-conditions') {
-        echo $messageWeatherConditions;
-    }elseif ($gender === 'boy' && $options === 'extra-curricular-activities') {
-        echo $messageExtraCcurricularActivities;
-    } elseif ($gender === 'girl' && $options === 'extra-curricular-activities') {
-        echo $messageExtraCcurricularActivities;
-    }
+        // An associative array $messages which maps each option to its respective message.
+        $messages = [
+            'illness' => $messageIllness,
+            'death-of-the-pet' => $messageDeathOfThePet,
+            'transport-problems' => $messageTransportProblems,
+            'weather-conditions' => $messageWeatherConditions,
+            'extra-curricular-activities' => $messageExtraCcurricularActivities
+        ];
+        
+        if ($gender === 'boy' || $gender === 'girl') {
+            // Built-in PHP function that checks whether a key exists in a given array.
+            if (array_key_exists($options, $messages)) {
+                echo $messages[$options];
+            } else {
+                echo "Invalid option.";
+            }
+        } else {
+            echo "Genre invalide.";
+        }
+        
 }
 ?>
 
