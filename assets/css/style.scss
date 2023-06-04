@@ -1,19 +1,23 @@
 @import 'reset.css';
+
 body {
     background-color: rgb(225, 201, 174);
 }
+
 header {
     background-color: rgb(133, 178, 178);
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
+
 h1 {
     display: flex;
     font-size: 25px;
     justify-content: center;
     align-items: center;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -29,6 +33,7 @@ form {
     max-height: 400px;
     overflow-y: auto;
 }
+
 input[type="text"],
 input[type="radio"] {
     width: 100%;
@@ -38,14 +43,17 @@ input[type="radio"] {
     border-radius: 10px;
     box-sizing: border-box;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     margin-right: 5px;
     transform: scale(0.9); 
 }
-input[type="text"]{
+
+input[type="text"] {
     width: 50%;
     margin-top: 5px;
 }
+
 input[type="submit"] {
     background-color: rgb(133, 178, 178);
     color: white;
@@ -55,6 +63,18 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
 }
+
 label {
     line-height: 1.5;
-  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+    }
+}

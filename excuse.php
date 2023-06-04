@@ -36,9 +36,6 @@
     <input type="radio" name="options" value="death-of-the-pet" id="option-death-of-the-pet" />
     <label for="option-death-of-the-pet">Death of the pet</label>
     <br>
-    <input type="radio" name="options" value="death-of-the-family-member" id="option-death-of-the-family-member" />
-    <label for="option-death-of-the-family-member">Death of the family member</label>
-    <br>
     <input type="radio" name="options" value="transport-problems" id="option-transport-problems" />
     <label for="option-transport-problems">Transport problems</label>
     <br>
@@ -118,6 +115,6 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     }
 }
 ?>
-<!-- test connection git -->
+
 </body>
 </html>
