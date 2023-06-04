@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Foldit:wght@600&family=Fraunces:ital,wght@0,700;0,900;1,700&family=Lexend+Deca:wght@100;400&family=Red+Hat+Display:wght@500&family=Roboto&display=swap');
 
 body {
     background-color: rgb(225, 201, 174);
@@ -12,6 +13,8 @@ header {
 }
 
 h1 {
+    font-family: 'serif';
+    font-weight: 600;
     display: flex;
     font-size: 25px;
     justify-content: center;
