@@ -118,6 +118,6 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     }
 }
 ?>
-
+<!-- test connection git -->
 </body>
 </html>
