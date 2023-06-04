@@ -71,6 +71,7 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     $pronounGender = ($gender === 'boy') ? 'he' : 'she';
     $personalPronounGender = ($gender === 'boy') ? 'him' : 'her';
 
+    
     $messageIllness = "$date<br><br> 
         Madam $nameTeacher, <br><br>
 
@@ -81,7 +82,7 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         and call the doctor.<br><br> 
 
         I don't know yet, this morning, if $pronounGender'll be absent for several days, 
-        but I'll be sure to let you know<br><br> 
+        but I'll be sure to let you know.<br><br> 
 
         in this liaison book, as soon as the doctor has made a medical diagnosis.<br><br> 
         Yours sincerely,<br><br> 
@@ -91,36 +92,35 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
     $messageDeathOfThePet = "$date<br><br>
         Dear Mr $nameTeacher,<br><br>
 
-        I am writing to inform you of some sad news that has affected us as a family. <br>
+        I am writing to inform you of some sad news that has affected us as a family. <br><br>
         Sadly, our beloved dog Brutus passed away suddenly last night. <br><br>
         He was a beloved member of our family for many years, and we are deeply saddened by his loss.<br><br>
         
-        Because of this sad circumstance and the grief we feel, I would prefer to give <br>
-        $nameChild a day off so that $pronounGender can be with us and get through this difficult <br>
-        time as a family. 
+        Because of this sad circumstance and the grief we feel, I would prefer to give
+        $nameChild a day off so that $pronounGender can be with us and get through this difficult
+        time as a family.<br><br> 
         
-        We feel it is important to offer $personalPronounGender emotional support during <br>
-        this time of grief.<br><br>
+        We feel it is important to offer $personalPronounGender emotional support during this time of grief.<br><br>
         
-        I understand the importance of $nameChild's education and attendance at school, <br>
+        I understand the importance of $nameChild's education and attendance at school,
         but please understand the exceptional situation we are facing. <br><br>
         
-        I undertake to provide $nameChild with all necessary school materials so that $pronounGender can catch up on missed <br>
+        I undertake to provide $nameChild with all necessary school materials so that $pronounGender can catch up on missed
         classes and be up to date with his work.<br><br>
         
-        Thank you for your understanding and support during this difficult time. If you have any questions or concerns, <br>
+        Thank you for your understanding and support during this difficult time. If you have any questions or concerns,
         please do not hesitate to contact me. We look forward to getting back to a normal routine at school as soon as possible.<br><br>
         
-        Yours sincerely
+        Yours sincerely, <br><br>
         
         $nameChild's mother";
 
     $messageTransportProblems = "$date<br><br>
         Dear Mr $nameTeacher,<br><br>
-        I would like to apologise for the absence of $nameGender, $nameChild, today due to the current strike.<br>
+        I would like to apologise for the absence of $nameGender, $nameChild, today due to the current strike.
          Unfortunately, public transport has been affected and we have been unable to get to school.<br><br>
 
-        I'm aware of the importance of regular attendance at school and always endeavour to ensure optimum attendance.<br>
+        I'm aware of the importance of regular attendance at school and always endeavour to ensure optimum attendance.
          However, in this case the circumstances were beyond our control.<br><br>
         
         I hope that this situation will be resolved quickly and that the school 
@@ -136,14 +136,13 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         $messageWeatherConditions = "$date<br><br>
         Dear Mr $nameTeacher,<br><br>
         
-        I would like to apologise for the absence of $nameGender, $nameChild, today due to the current weather conditions.<br> 
-        Unfortunately, the weather makes travelling dangerous and I have decided not to risk my child's safety on the way <br>
-        to school.<br><br>
+        I would like to apologise for the absence of $nameGender, $nameChild, today due to the current weather conditions.<br><br> 
+        Unfortunately, the weather makes travelling dangerous and I have decided not to risk my child's safety on the way to school.<br><br>
 
-        I am aware of the importance of regular attendance at school, however, in this particular case, <br>
+        I am aware of the importance of regular attendance at school, however, in this particular case,
         the extreme weather conditions do not allow us to travel to school safely.<br><br>
         
-        I hope that the weather conditions will soon stabilise and that the school can resume normal operations. <br>
+        I hope that the weather conditions will soon stabilise and that the school can resume normal operations. <br><br>
         We promise that our child will be back at school as soon as conditions allow.<br><br>
         
         We apologise for any inconvenience caused and thank you for your understanding.<br><br>
@@ -156,7 +155,9 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         Dear Mr $nameTeacher,<br><br>
 
         I would like to apologise for the absence of $nameGender, $nameChild, from school yesterday due to his participation
-        in a special extracurricular activity. Unfortunately, we realised that this activity coincided with school hours and
+        in a special extracurricular activity. <br><br>
+        
+        Unfortunately, we realised that this activity coincided with school hours and
         we were unable to find an alternative way of attending without missing school.<br><br>
 
         We understand the importance of regular attendance at school and we always strive to ensure optimum attendance.<br><br> 
@@ -183,9 +184,9 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         if ($gender === 'boy' || $gender === 'girl') {
             // Built-in PHP function that checks whether a key exists in a given array.
             if (array_key_exists($options, $messages)) {
+                echo "<div class=\"message\">";
                 echo $messages[$options];
-            } else {
-                echo "Invalid option.";
+                echo "</div>";
             }
         } else {
             echo "Genre invalide.";

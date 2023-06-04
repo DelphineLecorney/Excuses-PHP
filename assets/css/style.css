@@ -1,5 +1,6 @@
 @import 'reset.css';
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Foldit:wght@600&family=Fraunces:ital,wght@0,700;0,900;1,700&family=Lexend+Deca:wght@100;400&family=Red+Hat+Display:wght@500&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Dancing+Script&family=Lexend+Deca&family=Manrope&family=Montserrat&family=Outfit&family=Overpass:ital@1&display=swap");
 body {
   background-color: rgb(225, 201, 174);
 }
@@ -12,10 +13,10 @@ header {
 }
 
 h1 {
-  font-family: "serif";
+  font-family: "Foldit", "serif";
   font-weight: 600;
+  font-size: 100px;
   display: flex;
-  font-size: 25px;
   justify-content: center;
   align-items: center;
 }
@@ -68,6 +69,17 @@ input[type=submit] {
 
 label {
   line-height: 1.5;
+}
+
+div.message {
+  font-family: "Dancing Script", "serif";
+  font-size: 30px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(133, 178, 178);
+  padding: 100px;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgb(200, 181, 157), 0.6em 0 0.4em rgb(133, 178, 178);
+  text-align: left;
 }
 
 /* Media Queries */
