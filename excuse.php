@@ -122,6 +122,25 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         Yours sincerely,
         $nameChild's mother";
 
+        $messageWeatherConditions = "$date<br><br>
+        Dear Mr $nameTeacher,<br><br>
+        
+        I would like to apologise for the absence of $nameGender, $nameChild, today due to the current weather conditions.<br> 
+        Unfortunately, the weather makes travelling dangerous and I have decided not to risk my child's safety on the way <br>
+        to school.<br><br>
+
+        I am aware of the importance of regular attendance at school, however, in this particular case, <br>
+        the extreme weather conditions do not allow us to travel to school safely.<br><br>
+        
+        I hope that the weather conditions will soon stabilise and that the school can resume normal operations. <br>
+        We promise that our child will be back at school as soon as conditions allow.<br><br>
+        
+        We apologise for any inconvenience caused and thank you for your understanding.<br><br>
+        
+        Yours sincerely,<br><br>
+        
+        $nameChild's mother";
+
     if ($gender === 'boy' && $options === 'illness') {
         echo $messageIllness;
     } elseif ($gender === 'girl' && $options === 'illness') {
@@ -134,6 +153,10 @@ if (isset($_GET["nameChild"], $_GET["gender"], $_GET["nameTeacher"], $_GET["opti
         echo $messageTransportProblems;
     } elseif ($gender === 'girl' && $options === 'transport-problems') {
         echo $messageTransportProblems;
+    }elseif ($gender === 'boy' && $options === 'weather-conditions') {
+        echo $messageWeatherConditions;
+    } elseif ($gender === 'girl' && $options === 'weather-conditions') {
+        echo $messageWeatherConditions;
     }
 }
 ?>
