@@ -1,4 +1,4 @@
-# ✨ Fake Excuse Notes Generator  ✨
+✨ Fake Excuse Notes Generator  ✨
 
 > ## Hi ! I'm Delphine !
 >
@@ -42,11 +42,11 @@
 
 [Font family](https://fonts.google.com/)
 
-[Class dans PHP](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.eprojet.fr/cours/pdf/php-support.pdf)
+[Class PHP](https://www.conseil-webmaster.com/formation/php/04-mise-en-forme-php.php)
 
 
 ------------
 
 <h4 align="left">Connect with me:</h4><p align="left">
-<a href="<https://linkedin.com/in/gfdghshg>" target="blank"><img align="center" src="<https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg>" alt="gfdghshg" height="30" width="40" /></a></p>
-[Delphine Lecorney](www.linkedin.com/in/delphine-lecorney)
+<a href="<https://www.linkedin.com/in/delphine-lecorney/>" target="blank"><img align="center" src="<https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg>" alt="Linkedin" height="30" width="40" /></a></p>
+Delphine Lecorney
